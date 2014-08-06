@@ -19,8 +19,8 @@
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			margin-left: -175px;
-			margin-top: -100px;
+			margin-left: -300px;
+			margin-top: -200px;
 		}
 
 		a, a:visited {
