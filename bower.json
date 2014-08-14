@@ -1,0 +1,24 @@
+{
+  "name": "code.tedmdelacruz.com",
+  "version": "0.1.0",
+  "authors": [
+    "TedMdelaCruz <tedmdelaruz@gmail.com>"
+  ],
+  "description": "Personal web development playground by TedMdelaCruz",
+  "main": "public/index.php",
+  "keywords": [
+    "code",
+    "webdev",
+    "experimental"
+  ],
+  "license": "MIT",
+  "homepage": "code.tedmdelacruz.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

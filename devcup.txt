@@ -1,0 +1,61 @@
+Gameplan:
+Single-page webapp, front-end powered by JS and back-end powered by a RESTful Laravel 4 API
+
+Todo:
+Front-end workflow
+    - Grunt build command that will concatenate all CSS and SCSS files into one styles.css
+      and all JS libraries and custom JS into one app.js
+Install MySQL in local and Beemo
+Create TODO app for practice
+Research on local useful APIs
+
+I need:
+A solid and easy to use PHP framework
+A tight JS framework
+Well-versed frontend and backend workflow
+
+Tools:
+Frontend automation
+Data visualization
+Realtime sync data
+Geolocation
+SMS/Call API
+Social integration
+Email support
+Google integration
+Markup scrap
+
+PHP frameworks/tools:
+Laravel 4.3
+Phalcon
+Phake
+
+JS frameworks/modules/tools:
+AngularJS
+Yo
+Grunt
+Bower
+NodeJS
+D3
+Socket.io
+
+Styling and Markup:
+Sass + Compass + Susy
+Haml
+
+Web tools:
+Firebase
+AWS
+Digital Ocean
+
+Database Systems:
+MySQL
+MariaDB
+MongoDB
+
+APIs:
+Facebook
+Twitter
+Google
+Globe Labs
+Dropbox

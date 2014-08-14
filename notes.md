@@ -1,3 +1,6 @@
 To Do
 ====
-Currently figuring out how to deploy to code.tedmdelacruz.com using Git
+
+Setup front-end workflow
+Install Sass, Compass, Susy (or Flint)
+Setup MySQL database
