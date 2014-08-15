@@ -4,13 +4,11 @@ Single-page webapp, front-end powered by JS and back-end powered by a RESTful La
 Todo:
 Front-end workflow
     - Grunt build command that will concatenate all CSS and SCSS files into one styles.css
-      and all JS libraries and custom JS into one app.js
-Install MySQL in local and Beemo
+    and one uglified styles.min.css
 Create TODO app for practice
 Research on local useful APIs
 
 I need:
-A solid and easy to use PHP framework
 A tight JS framework
 Well-versed frontend and backend workflow
 

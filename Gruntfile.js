@@ -81,7 +81,29 @@ module.exports = function(grunt) {
         src: ['lib/**/*.js', 'test/**/*.js']
       }
     },
+    sass: {
+      dist: {
+          options: {
+            style: 'expanded'
+          },
+          files: {
+              'public/css/styles.css': 'scss/styles.scss'
+          }
+      }
+    },
     watch: {
+      sass: {
+        options: { livereload: true },
+        files: ['scss/**/*.scss'],
+        tasks: ['sass']
+      },
+      livereload: {
+        options: { livereload: true },
+        files: [
+          'app/views/**/*.php',
+          'js/**/*'
+        ]
+      },
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
@@ -99,6 +121,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'concat', 'copy', 'uglify']);
