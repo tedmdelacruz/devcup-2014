@@ -9,16 +9,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="span2">
-                <form method="post">
-                    <input type="text" name="username" placeholder="Username" class="form-control">
-                    <input type="password" class="form-control">
-                    <input type="submit" value="Login" class="btn btn-primary btn-large">
-                </form>
-            </div>
-        </div>
+        @yield('content')
     </div>
+    <script src="//localhost:35729/livereload.js"></script>
     <script type="text/javascript" src="{{asset('js/scripts.js')}}"></script>
 </body>
 </html>

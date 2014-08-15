@@ -1,25 +1,50 @@
-## Laravel PHP Framework
+Hello
+===
+This is the initial boilerplate of Ted Mathew dela Cruz for the upcoming WebGeek DevCup 2014
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Setup
+===
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+1) Install Laravel 4.2
+---
+    - PHP 5.5
+    - Mcrypt
+    > composer create-project laravel/laravel <project-name> --prefer-dist
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+2) Install MySQL server 5.5
+---
+    > sudo apt-get install mysql-server
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+3) Setup front-end workflow
+---
+    - Global ruby + rvm
+    - Global npm
+    > npm init
+    - Global npm modules: grunt, bower
+    > bower init
+    > gem install compass
+    > grunt-init gruntfile
 
-## Official Documentation
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
-
-### Contributing To Laravel
-
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Environment
+====
+Composer
+PHP 5.5 + Mcrypt
+    - Laravel 4.2
+MySQL 5.5
+Ruby 2.1.2 (rvm)
+Bower
+NodeJS
+GruntJS
+    - Compass
+    - Concat
+    - JSHint
+    - QUnit
+    - Uglify
+    - Watch
+Socket.io OR FirebaseJS
+jQuery
+Sass
+    - Compass
+    - Flint or Susy + Breakpoint
+Bootflat or PureCSS or MetroUI

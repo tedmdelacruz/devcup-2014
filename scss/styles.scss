@@ -2,8 +2,13 @@
  * Custom styles here
  */
 
-form {
-    .form-control {
-        margin-bottom: 10px;
+.hello {
+    margin-top: 200px;
+
+    .hello-tools-used .list-group-item::before {
+        content: '//';
+        margin-right: 10px;
+        color: #bdbdbd;
+        font: 1em sans-serif;
     }
 }
