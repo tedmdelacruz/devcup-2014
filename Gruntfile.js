@@ -21,11 +21,17 @@ module.exports = function(grunt) {
             'bower_components/bootstrap/dist/js/bootstrap.min.js',
             'bower_components/Bootflat/bootflat/js/icheck.min.js',
             'bower_components/Bootflat/bootflat/js/jquery.fs.selecter.min.js',
-            'bower_components/Bootflat/bootflat/js/jquery.fs.stepper.min.js',
-            'bower_components/angular/angular.min.js',
-            'js/app.js'
+            'bower_components/Bootflat/bootflat/js/jquery.fs.stepper.min.js'
         ],
         dest: 'public/js/scripts.js'
+      },
+      appJs: {
+        src: [
+            'bower_components/angular/angular.min.js',
+            'js/app.js',
+            'js/controller.js'
+        ],
+        dest: 'public/js/app.js'
       },
       css: {
         src: [
@@ -59,13 +65,6 @@ module.exports = function(grunt) {
                     filter: 'isFile',
                     src: ['bower_components/Bootflat/bootflat/img/check_flat/default.png'],
                     dest: 'public/img/check_flat/'
-                },
-                {
-                    expand: true,
-                    flatten: true,
-                    filter: 'isFile',
-                    src: ['js/controller.js'],
-                    dest: 'public/js/'
                 }
             ]
         }
@@ -77,7 +76,11 @@ module.exports = function(grunt) {
       dist: {
         src: '<%= concat.js.dest %>',
         dest: 'public/js/scripts.min.js'
-      }
+      },
+      app: {
+        src: '<%= concat.appJs.dest %>',
+        dest: 'public/js/app.min.js'
+       }
     },
     jshint: {
       options: {

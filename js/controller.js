@@ -1,14 +1,16 @@
-"use strict";
-
-var phonecatApp = angular.module('phonecatApp', []);
-
-phonecatApp.controller('PhoneListCtrl', function ($scope) {
-  $scope.phones = [
-    {'name': 'Nexus S',
-     'snippet': 'Fast just got faster with Nexus S.'},
-    {'name': 'Motorola XOOM™ with Wi-Fi',
-     'snippet': 'The Next, Next Generation tablet.'},
-    {'name': 'MOTOROLA XOOM™',
-     'snippet': 'The Next, Next Generation tablet.'}
+app.controller('UserController', function ($scope) {
+  $scope.users = [
+    {
+        'name': 'Juan dela Cruz',
+        'username': 'jdelacruz',
+        'desc': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam explicabo voluptas molestias eius dolores fuga, eveniet quisquam quo, ratione excepturi corporis quos pariatur hic id eligendi commodi obcaecati quidem itaque?'
+    },
+    {
+        'name': 'Ted Mathew dela Cruz',
+        'username': 'tedmdelacruz',
+        'desc': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam explicabo voluptas molestias eius dolores fuga, eveniet quisquam quo, ratione excepturi corporis quos pariatur hic id eligendi commodi obcaecati quidem itaque?'
+    }
   ];
 });
+
+console.log('controller');
