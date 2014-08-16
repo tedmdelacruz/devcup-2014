@@ -59,6 +59,13 @@ module.exports = function(grunt) {
                     filter: 'isFile',
                     src: ['bower_components/Bootflat/bootflat/img/check_flat/default.png'],
                     dest: 'public/img/check_flat/'
+                },
+                {
+                    expand: true,
+                    flatten: true,
+                    filter: 'isFile',
+                    src: ['js/controller.js'],
+                    dest: 'public/js/'
                 }
             ]
         }

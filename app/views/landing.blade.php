@@ -1,14 +1,13 @@
 @extends('layouts.app-base')
 @section('content')
     <div class="row">
-        <div class="landing col-md-6 col-md-offset-3">
-            <i class="landing-github-icon fa fa-github-alt fa-5x"></i>
+        <div class="app col-md-6 col-md-offset-3">
+            <i class="app-github-icon fa fa-github-alt fa-5x"></i>
             <form method="post" role="form">
                 <div class="form-group">
-                    <input type="text" class="form-control input-lg" name="username" placeholder="GitHub Username">
+                    <input type="text" class="app-username-input form-control input-lg" name="username" placeholder="GitHub Username">
                 </div>
             </form>
-            {{ 1 + 1 }}
         </div>
     </div>
 @stop

@@ -11,12 +11,34 @@
   font: 1em sans-serif;
 }
 
-.landing {
-  margin-top: 100px;
+.app-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.app-wrapper, .app-wrapper body {
+  background-color: #434a54;
+}
+
+.app {
+  margin-top: 80px;
   text-align: center;
 }
-.landing .landing-github-icon {
+.app .app-github-icon {
   text-align: center;
   font-size: 12.5em;
   margin-bottom: 20px;
+}
+.app .app-username-input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 3px dashed #656d78;
+  text-align: center;
+  height: 80px;
+  font-size: 2em;
+  background-color: #434a54;
+}
+.app .app-github-icon,
+.app .app-username-input,
+.app ::-webkit-input-placeholder {
+  color: #656d78;
 }

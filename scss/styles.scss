@@ -13,13 +13,46 @@
     }
 }
 
-.landing {
-    margin-top: 100px;
+$darkGray: #434A54;
+$lightBlue: #5D9CEC;
+$blue: #4A89DC;
+$gray: #656D78;
+$primaryColor: $darkGray;
+$secondaryColor: $gray;
+$lightGrey: #efefef;
+
+.app-wrapper {
+    height: 100%;
+    width: 100%;
+
+    &, body {
+        background-color: $primaryColor;
+    }
+}
+
+.app {
+    margin-top: 80px;
     text-align: center;
 
-    .landing-github-icon {
+    .app-github-icon {
         text-align: center;
         font-size: 12.5em;
         margin-bottom: 20px;
+    }
+
+    .app-username-input {
+        border: none;
+        border-radius: 0;
+        border-bottom: 3px dashed $secondaryColor;
+        text-align: center;
+        height: 80px;
+        font-size: 2em;
+        background-color: $primaryColor;
+    }
+
+    .app-github-icon,
+    .app-username-input,
+    ::-webkit-input-placeholder {
+        color: $secondaryColor;
     }
 }
