@@ -1,5 +1,5 @@
 {
-  "name": "code.tedmdelacruz.com",
+  "name": "tedmdelacruz-devcup",
   "version": "0.1.0",
   "authors": [
     "TedMdelaCruz <tedmdelaruz@gmail.com>"
@@ -12,7 +12,7 @@
     "experimental"
   ],
   "license": "MIT",
-  "homepage": "code.tedmdelacruz.com",
+  "homepage": "devcup.tedmdelacruz.com",
   "private": true,
   "ignore": [
     "**/.*",
