@@ -4,6 +4,8 @@
 /bower_components
 /.sass-cache
 /public/css
+/public/js
+/public/img
 composer.phar
 composer.lock
 .env.*.php

@@ -53,7 +53,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
+        dest: 'public/js/scripts.min.js'
       }
     },
     jshint: {
@@ -124,6 +124,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat', 'copy', 'uglify']);
+  grunt.registerTask('default', ['sass', 'jshint', 'concat', 'copy', 'uglify']);
 
 };
+
