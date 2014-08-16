@@ -21,3 +21,8 @@ Setup
     > npm install
     > bower install
     > sudo chmod 775 app/storage && sudo chmod 775 app/storage/*
+
+Workflow
+---
+    > grunt
+    > grunt watch

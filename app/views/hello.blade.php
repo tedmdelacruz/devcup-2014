@@ -17,7 +17,7 @@
             </div>
             <div class="small">
                 <em>I have no idea what I'm doing</em><br>
-                <a href="#">GitHub</a><br>
+                <a href="https://github.com/tedmdelacruz/devcup-2014-boilerplate">GitHub</a><br>
             </div>
         </div>
     </div>
