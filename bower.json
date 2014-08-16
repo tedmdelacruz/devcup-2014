@@ -24,11 +24,14 @@
   "devDependencies": {
     "jquery": "~2.1.1",
     "bootstrap": "~3.2.0",
-    "Bootflat": "~2.0.3"
+    "Bootflat": "~2.0.3",
+    "fontawesome": "~4.1.0"
   },
   "dependencies": {
     "jquery": "~2.1.1",
     "bootstrap": "~3.2.0",
-    "Bootflat": "~2.0.3"
+    "Bootflat": "~2.0.3",
+    "angular": "~1.2.22",
+    "fontawesome": "~4.1.0"
   }
 }

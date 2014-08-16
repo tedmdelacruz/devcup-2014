@@ -1,0 +1,22 @@
+/**
+ * Custom styles here
+ */
+.hello {
+  margin-top: 100px;
+}
+.hello .hello-tools-used .list-group-item::before {
+  content: '//';
+  margin-right: 10px;
+  color: #bdbdbd;
+  font: 1em sans-serif;
+}
+
+.landing {
+  margin-top: 100px;
+  text-align: center;
+}
+.landing .landing-github-icon {
+  text-align: center;
+  font-size: 12.5em;
+  margin-bottom: 20px;
+}

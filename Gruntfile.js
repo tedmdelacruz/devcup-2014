@@ -1,7 +1,6 @@
 /*global module:false*/
 module.exports = function(grunt) {
-
-  // Project configuration.
+ // Project configuration.
   grunt.initConfig({
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
@@ -16,12 +15,26 @@ module.exports = function(grunt) {
         banner: '<%= banner %>',
         stripBanners: true
       },
-      dist: {
+      js: {
         src: [
             'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/bootstrap/dist/js/bootstrap.min.js',
+            'bower_components/Bootflat/bootflat/js/icheck.min.js',
+            'bower_components/Bootflat/bootflat/js/jquery.fs.selecter.min.js',
+            'bower_components/Bootflat/bootflat/js/jquery.fs.stepper.min.js',
+            'bower_components/angular/angular.min.js',
             'js/app.js'
         ],
         dest: 'public/js/scripts.js'
+      },
+      css: {
+        src: [
+            'bower_components/bootstrap/dist/css/bootstrap.min.css',
+            'bower_components/Bootflat/bootflat/css/bootflat.min.css',
+            'bower_components/fontawesome/css/font-awesome.min.css',
+            'css/styles.css'
+        ],
+        dest: 'public/css/styles.css'
       }
     },
     copy: {
@@ -32,10 +45,13 @@ module.exports = function(grunt) {
                     flatten: true,
                     filter: 'isFile',
                     src: [
-                        'bower_components/Bootflat/css/bootstrap.min.css',
-                        'bower_components/Bootflat/bootflat/css/bootflat.min.css'
+                        'bower_components/fontawesome/fonts/fontawesome-webfont.ttf',
+                        'bower_components/fontawesome/fonts/fontawesome-webfont.svg',
+                        'bower_components/fontawesome/fonts/fontawesome-webfont.woff',
+                        'bower_components/fontawesome/fonts/FontAwesome.otf',
+                        'bower_components/fontawesome/fonts/fontawesome-webfont.eot'
                     ],
-                    dest: 'public/css/'
+                    dest: 'public/fonts/'
                 },
                 {
                     expand: true,
@@ -52,7 +68,7 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       dist: {
-        src: '<%= concat.dist.dest %>',
+        src: '<%= concat.js.dest %>',
         dest: 'public/js/scripts.min.js'
       }
     },
@@ -87,7 +103,7 @@ module.exports = function(grunt) {
             style: 'expanded'
           },
           files: {
-              'public/css/styles.css': 'scss/styles.scss'
+              'css/styles.css': 'scss/styles.scss'
           }
       }
     },
@@ -95,12 +111,13 @@ module.exports = function(grunt) {
       sass: {
         options: { livereload: true },
         files: ['scss/**/*.scss'],
-        tasks: ['sass']
+        tasks: ['sass', 'concat', 'copy']
       },
       livereload: {
         options: { livereload: true },
         files: [
           'app/views/**/*.php',
+          'app/controllers/**/*.php',
           'js/**/*'
         ]
       },

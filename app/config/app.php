@@ -2,6 +2,8 @@
 
 return array(
 
+    'name' => 'App Name Here',
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application Debug Mode
@@ -78,7 +80,7 @@ return array(
 	|
 	*/
 
-	'key' => 'Ar0hOo9ErezqBFhDzexxutT10qCOPab0',
+	'key' => 'od94kdiqlake94iroep30ckdziekw3o0',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -122,7 +124,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-        'ConnorVG\WolframAlpha\WolframAlphaServiceProvider'
+        'ConnorVG\WolframAlpha\WolframAlphaServiceProvider',
 	),
 
 	/*
@@ -190,6 +192,9 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
+        'WolframAlpha' => 'ConnorVG\WolframAlpha\WolframAlphaFacade',
 	),
+
+    'wolframapikey' => '6KV39X-3T55UU87G2'
 
 );

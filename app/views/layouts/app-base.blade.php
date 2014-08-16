@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Code :: Ted Mathew dela Cruz</title>
+    <title>{{$appName}} :: Ted Mathew dela Cruz</title>
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
 </head>
-<body>
+<body ng-controller="GithubListController">
     <div class="container">
         @yield('content')
     </div>

@@ -6,6 +6,8 @@
 /public/css
 /public/js
 /public/img
+/public/php_errors.log
+npm-debug.log
 composer.phar
 composer.lock
 .env.*.php
