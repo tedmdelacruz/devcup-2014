@@ -16,30 +16,37 @@
   width: 100%;
 }
 .app-wrapper, .app-wrapper body {
-  background-color: #434a54;
-  color: #656d78;
+  background-color: #ccd1d9;
+  color: #aab2bd;
 }
 
 .app {
-  margin-top: 80px;
+  margin-top: 60px;
   text-align: center;
 }
 .app .app-github-icon {
   text-align: center;
-  font-size: 12.5em;
-  margin-bottom: 20px;
+  font-size: 8em;
+  margin-bottom: 30px;
 }
 .app .app-username-input {
   border: none;
   border-radius: 0;
-  border-bottom: 3px dashed #656d78;
+  border-bottom: 3px dashed #aab2bd;
   text-align: center;
   height: 80px;
-  font-size: 2em;
-  background-color: #434a54;
+  font-size: 1.8em;
+  background-color: #ccd1d9;
+  margin-bottom: 20px;
 }
 .app .app-github-icon,
 .app .app-username-input,
 .app ::-webkit-input-placeholder {
-  color: #656d78;
+  color: #aab2bd;
+}
+.app .user-card .user-card-inner {
+  background-color: #aab2bd;
+  color: #ccd1d9;
+  min-height: 200px;
+  margin-bottom: 20px;
 }

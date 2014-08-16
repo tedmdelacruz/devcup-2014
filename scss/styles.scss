@@ -13,13 +13,17 @@
     }
 }
 
-$darkGray: #434A54;
 $lightBlue: #5D9CEC;
 $blue: #4A89DC;
-$gray: #656D78;
-$primaryColor: $darkGray;
+
+$lightGray: #E6E9ED;
+$mediumGray: #CCD1D9;
+$gray: #AAB2BD;
+$darkGray: #656D78;
+$darkerGray: #434A54;
+
+$primaryColor: $mediumGray;
 $secondaryColor: $gray;
-$lightGrey: #efefef;
 
 .app-wrapper {
     height: 100%;
@@ -32,13 +36,13 @@ $lightGrey: #efefef;
 }
 
 .app {
-    margin-top: 80px;
+    margin-top: 60px;
     text-align: center;
 
     .app-github-icon {
         text-align: center;
-        font-size: 12.5em;
-        margin-bottom: 20px;
+        font-size: 8em;
+        margin-bottom: 30px;
     }
 
     .app-username-input {
@@ -47,13 +51,23 @@ $lightGrey: #efefef;
         border-bottom: 3px dashed $secondaryColor;
         text-align: center;
         height: 80px;
-        font-size: 2em;
+        font-size: 1.8em;
         background-color: $primaryColor;
+        margin-bottom: 20px;
     }
 
     .app-github-icon,
     .app-username-input,
     ::-webkit-input-placeholder {
         color: $secondaryColor;
+    }
+
+    .user-card {
+        .user-card-inner {
+            background-color: $secondaryColor;
+            color: $primaryColor;
+            min-height: 200px;
+            margin-bottom: 20px;
+        }
     }
 }

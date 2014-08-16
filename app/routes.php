@@ -12,6 +12,6 @@
 */
 
 Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@getIndex']);
-Route::get('github_userdiff', ['as' => 'home.landing', 'uses' => 'HomeController@getLanding']);
+Route::get('userdiff', ['as' => 'home.landing', 'uses' => 'HomeController@getLanding']);
 
 Route::get('crunch', ['as' => 'data.crunch', 'uses' => 'DataController@getCalculation']);
