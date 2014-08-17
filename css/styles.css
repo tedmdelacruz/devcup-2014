@@ -21,7 +21,7 @@
 .app .app-username-input {
   border: none;
   border-radius: 0;
-  border-bottom: 3px dashed #fefefe;
+  border-bottom: 3px dotted #fefefe;
   text-align: center;
   height: 80px;
   font-size: 1.8em;
@@ -32,6 +32,10 @@
 .app .app-username-input,
 .app ::-webkit-input-placeholder {
   color: #fefefe;
+}
+.app .error-list {
+  list-style: none;
+  padding-left: 0px;
 }
 .app .user-card .user-card-header .user-card-avatar {
   vertical-align: middle;
@@ -66,13 +70,21 @@
 .app .repo-card .repo-card-header .repo-card-name {
   font-size: 2em;
   color: #656d78;
+  margin-bottom: 10px;
 }
 .app .repo-card .repo-card-header .repo-card-username {
   font-size: 1.25em;
   color: #656d78;
 }
-.app .repo-card .repo-card-header .repo-card-analyze-btn {
-  width: 100%;
+.app .repo-card .repo-card-inner {
+  transition: 0.1s linear;
+}
+.app .repo-card .repo-card-inner:hover {
+  cursor: pointer;
+  background-color: #5d9cec;
+}
+.app .repo-card .repo-card-inner:hover, .app .repo-card .repo-card-inner:hover .repo-card-name {
+  color: #fefefe;
 }
 
 .hello {

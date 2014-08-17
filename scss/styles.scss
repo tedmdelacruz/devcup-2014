@@ -7,7 +7,7 @@ $lightBlue: #5D9CEC;
 $blue: #4A89DC;
 $mint: #37BC9B;
 $lightMint: #48CFAD;
-$lightAqua: #48CFAD;
+$lightAqua: #4FC1E9;
 $aqua: #3BAFDA;
 $lightGray: #E6E9ED;
 $mediumGray: #CCD1D9;
@@ -44,7 +44,7 @@ $hGutter: $vGutter / 1.5;
     .app-username-input {
         border: none;
         border-radius: 0;
-        border-bottom: 3px dashed $secondaryColor;
+        border-bottom: 3px dotted $secondaryColor;
         text-align: center;
         height: 80px;
         font-size: 1.8em;
@@ -56,6 +56,11 @@ $hGutter: $vGutter / 1.5;
     .app-username-input,
     ::-webkit-input-placeholder {
         color: $secondaryColor;
+    }
+
+    .error-list {
+        list-style: none;
+        padding-left: 0px;
     }
 
     .user-card {
@@ -103,15 +108,25 @@ $hGutter: $vGutter / 1.5;
             .repo-card-name {
                 font-size: 2em;
                 color: $darkGray;
+                margin-bottom: $vGutter / 2;
             }
 
             .repo-card-username {
                 font-size: 1.25em;
                 color: $darkGray;
             }
+        }
 
-            .repo-card-analyze-btn {
-                width: 100%;
+        .repo-card-inner {
+            transition: 0.1s linear;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $lightBlue;
+
+                &, .repo-card-name {
+                    color: $offWhite;
+                }
             }
         }
     }

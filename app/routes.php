@@ -15,11 +15,8 @@ Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@getIndex']);
 Route::get('app', ['as' => 'home.app', 'uses' => 'HomeController@getApp']);
 
 
-Route::get('getUser', ['as' => 'data.getUser', 'uses' => 'AppController@getUser']);
 Route::get('getUser/{query}', ['as' => 'data.getUser', 'uses' => 'AppController@getUser']);
-Route::get('getRepos', ['as' => 'data.getRepos', 'uses' => 'AppController@getRepos']);
 Route::get('getRepos/{query}', ['as' => 'data.getRepos', 'uses' => 'AppController@getRepos']);
 
-Route::get('process', ['as' => 'data.process', 'uses' => 'AppController@process']);
-Route::get('process/{query}', ['as' => 'data.process', 'uses' => 'AppController@process']);
-Route::get('analyze', ['as' => 'data.analyze', 'uses' => 'AppController@analyze']);
+Route::get('fetchCommitDates/{owner}/{repo}', ['as' => 'data.fetchCommitDates', 'uses' => 'AppController@fetchCommitDates']);
+Route::get('analyze/{date}', ['as' => 'data.analyze', 'uses' => 'AppController@analyze']);

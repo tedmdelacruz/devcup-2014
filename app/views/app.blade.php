@@ -12,6 +12,9 @@
                 <h1>
                     <i class="app-github-icon fa fa-github-alt fa-2x"></i>
                 </h1>
+                <ul class="error-list" ng-model="errors" ng-repeat="error in errors" ng-if="errors.length > 0">
+                    <li class="error alert alert-danger"><i class="fa fa-exclamation-triangle"></i> <% error %></li>
+                </ul>
                 <form method="get" action="" role="form" autocomplete="off" ng-submit="getUser()">
                     <div class="form-group">
                         <input type="text" ng-model="query" class="app-username-input form-control input-lg" name="username" placeholder="GitHub Username">
@@ -29,17 +32,14 @@
                 </div>
             </div>
         </div>
-        <div class="row hide">
-            <div class="col-md-4 repo-card">
+        <div class="row" ng-if="repos.length > 0">
+            <div class="col-md-4 repo-card" ng-repeat="repo in repos" ng-model="repos" ng-click="fetchCommitDates(repo)">
                 <div class="repo-card-inner clearfix">
                     <div class="repo-card-header">
-                        <strong class="repo-card-name"><a href="#">Repository Name</a></strong>
-                        <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo a, eveniet tempora veritatis hic nostrum cum et beatae nesciunt, laboriosam quidem, deserunt, corrupti deleniti magnam mollitia ad doloribus! Facere, ab.</p>
-                        <div class="row-fluid">
-                            <div class="repo-user-details">
-                                <a href="#" class="btn btn-info btn-lg repo-card-analyze-btn">Analyze</a>
-                            </div>
+                        <div class="repo-card-name">
+                            <strong><% repo.name %></strong>
                         </div>
+                        <p class="small"><% repo.description %></p>
                     </div>
                     <div class="repo-card-desc small">
                         <p><% repo.owner.description %></p>
@@ -47,21 +47,12 @@
                 </div>
             </div>
         </div>
-        <div class="row" ng-if="repos.length > 0">
-            <div class="col-md-4 repo-card" ng-repeat="repo in repos" ng-model="repos">
+        <div class="row" ng-if="results.length > 0">
+            <div class="col-md-12 repo-card" ng-repeat="result in results" ng-model="results" ng-click="fetchCommitDates(repo)">
                 <div class="repo-card-inner clearfix">
-                    <div class="repo-card-header">
-                        <div>
-                            <strong class="repo-card-name"><% repo.name %></strong>
-                        </div>
-                        <p class="small"><% repo.description %></p>
-                        <div>
-                            <a href="{{route('data.analyze')}}/<% repo.name %>" class="btn btn-info btn-lg repo-card-analyze-btn">Analyze</a>
-                        </div>
-                    </div>
-                    <div class="repo-card-desc small">
-                        <p><% repo.owner.description %></p>
-                    </div>
+                    <ul class="repo-card-commit">
+                        <li ng-repeat="entry in result"><% entry %></li>
+                    </ul>
                 </div>
             </div>
         </div>
