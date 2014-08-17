@@ -18,17 +18,24 @@ class AppController extends BaseController {
         return Response::json($repos);
     }
 
-    public function fetchCommitDates($user, $repo) {
-        $commits = $this->client->api('repo')->fetchCommits($user, $repo);
+    public function fetchCommits($user, $repo) {
+        $rawCommits = $this->client->api('repo')->fetchCommits($user, $repo);
 
-        if (count($commits) > 0) {
-            $dates = [];
-            foreach ($commits as $commit) {
+        if (count($rawCommits) > 0) {
+            $commits = [];
+            foreach ($rawCommits as $commit) {
                 $date = strtotime($commit['commit']['committer']['date']);
-                $dates[] = date('d M Y', $date);
+                $date = date('d M Y', $date);
+                $commits[$date] = [
+                    'date' => $date,
+                    'message' => $commit['commit']['message']
+                ];
             }
-            $dates = array_unique($dates);
-            return Response::json($dates);
+            $processedCommits = [];
+            foreach ($commits as $commit) {
+                $processedCommits[] = $commit;
+            }
+            return Response::json($processedCommits);
         }
 
         return Response::json([]);
@@ -36,7 +43,23 @@ class AppController extends BaseController {
 
     public function analyze($date) {
         $result = WolframAlpha::easyQuery($date);
-        return Response::json($result);
+        $processedResult = [];
+
+        // YOLO
+        foreach ($result as $item) {
+            if (strpos($item, 'Date formats:') === false &&
+                strpos($item, 'Time in ') === false &&
+                strpos($item, 'Daylight information') === false) {
+
+            if (strpos($item, 'Time difference') !== false) {
+                $item = str_replace('Time difference from today ', '', $item);
+            }
+
+            $processsedResult[] = $item;
+        }
+
+        }
+        return Response::json($processsedResult);
     }
 
 }

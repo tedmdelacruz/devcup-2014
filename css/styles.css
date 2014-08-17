@@ -6,34 +6,38 @@
   width: 100%;
 }
 .app-wrapper, .app-wrapper body {
-  background-color: #aab2bd;
-  color: #fefefe;
+  background-color: #434a54;
+  color: #aab2bd;
 }
 
 .app {
   margin-top: 60px;
   text-align: center;
 }
+.app .app-header {
+  margin-bottom: 40px;
+}
 .app .app-github-icon {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 10em;
+  color: #aab2bd;
 }
 .app .app-username-input {
   border: none;
   border-radius: 0;
-  border-bottom: 3px dotted #fefefe;
+  border-bottom: 3px dotted #aab2bd;
   text-align: center;
   height: 80px;
   font-size: 1.8em;
-  background-color: #aab2bd;
+  background-color: #434a54;
   margin-bottom: 20px;
 }
-.app .app-github-icon,
 .app .app-username-input,
 .app ::-webkit-input-placeholder {
-  color: #fefefe;
+  color: #5a6370;
 }
-.app .error-list {
+.app .error-list, .app .info-list {
   list-style: none;
   padding-left: 0px;
 }
@@ -44,18 +48,17 @@
   margin-right: 13.33333px;
 }
 .app .user-card .user-card-header .user-card-username {
+  color: #434a54;
   vertical-align: middle;
   font-size: 2.5em;
 }
-.app .user-card,
-.app .repo-card {
+.app .card {
   text-align: left;
 }
-.app .user-card .user-card-inner,
-.app .repo-card .repo-card-inner {
-  background-color: #fefefe;
+.app .card .card-inner {
+  background-color: #aab2bd;
   border-radius: 6px;
-  color: #aab2bd;
+  color: #434a54;
   min-height: 100px;
   margin-bottom: 20px;
   padding: 20px 13.33333px;
@@ -81,10 +84,14 @@
 }
 .app .repo-card .repo-card-inner:hover {
   cursor: pointer;
-  background-color: #5d9cec;
+  background-color: #656d78;
 }
 .app .repo-card .repo-card-inner:hover, .app .repo-card .repo-card-inner:hover .repo-card-name {
   color: #fefefe;
+}
+.app .commit-card .commit-card-commit {
+  list-style: none;
+  padding-left: 0px;
 }
 
 .hello {

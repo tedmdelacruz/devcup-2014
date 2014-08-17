@@ -15,8 +15,8 @@ $gray: #AAB2BD;
 $darkGray: #656D78;
 $darkerGray: #434A54;
 
-$primaryColor: $gray;
-$secondaryColor: $offWhite;
+$primaryColor: $darkerGray;
+$secondaryColor: $gray;
 $tertiaryColor: $lightAqua;
 
 $vGutter: 20px;
@@ -36,9 +36,15 @@ $hGutter: $vGutter / 1.5;
     margin-top: 60px;
     text-align: center;
 
+    .app-header {
+        margin-bottom: $vGutter * 2;
+    }
+
     .app-github-icon {
         text-align: center;
         margin-bottom: $vGutter;
+        font-size: 10em;
+        color: $secondaryColor;
     }
 
     .app-username-input {
@@ -52,13 +58,12 @@ $hGutter: $vGutter / 1.5;
         margin-bottom: $vGutter;
     }
 
-    .app-github-icon,
     .app-username-input,
     ::-webkit-input-placeholder {
-        color: $secondaryColor;
+        color: lighten($primaryColor, 10%);
     }
 
-    .error-list {
+    .error-list, .info-list {
         list-style: none;
         padding-left: 0px;
     }
@@ -75,6 +80,7 @@ $hGutter: $vGutter / 1.5;
             }
 
             .user-card-username {
+                color: $primaryColor;
                 vertical-align: middle;
                 font-size: 2.5em;
             }
@@ -83,13 +89,11 @@ $hGutter: $vGutter / 1.5;
 
     }
 
-    .user-card ,
-    .repo-card {
+    .card {
         text-align: left;
     }
 
-    .user-card .user-card-inner,
-    .repo-card .repo-card-inner {
+    .card .card-inner {
         background-color: $secondaryColor;
         border-radius: 6px;
         color: $primaryColor;
@@ -122,7 +126,7 @@ $hGutter: $vGutter / 1.5;
 
             &:hover {
                 cursor: pointer;
-                background-color: $lightBlue;
+                background-color: $darkGray;
 
                 &, .repo-card-name {
                     color: $offWhite;
@@ -130,6 +134,14 @@ $hGutter: $vGutter / 1.5;
             }
         }
     }
+
+    .commit-card {
+        .commit-card-commit {
+            list-style: none;
+            padding-left: 0px;
+        }
+    }
+
 }
 
 .hello {
