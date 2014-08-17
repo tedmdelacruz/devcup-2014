@@ -123,13 +123,19 @@ module.exports = function(grunt) {
         files: ['scss/**/*.scss'],
         tasks: ['sass', 'concat', 'copy']
       },
-      livereload: {
+      php: {
         options: { livereload: true },
         files: [
           'app/views/**/*.php',
           'app/controllers/**/*.php',
-          'js/**/*'
         ]
+      },
+      appJs: {
+        options: { livereload: true },
+        files: [
+          'js/**/*.js',
+        ],
+        tasks: ['concat']
       },
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',

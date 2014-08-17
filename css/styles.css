@@ -1,23 +1,13 @@
 /**
  * Custom styles here
  */
-.hello {
-  margin-top: 100px;
-}
-.hello .hello-tools-used .list-group-item::before {
-  content: '//';
-  margin-right: 10px;
-  color: #bdbdbd;
-  font: 1em sans-serif;
-}
-
 .app-wrapper {
   height: 100%;
   width: 100%;
 }
 .app-wrapper, .app-wrapper body {
-  background-color: #ccd1d9;
-  color: #aab2bd;
+  background-color: #aab2bd;
+  color: #fefefe;
 }
 
 .app {
@@ -26,27 +16,71 @@
 }
 .app .app-github-icon {
   text-align: center;
-  font-size: 8em;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .app .app-username-input {
   border: none;
   border-radius: 0;
-  border-bottom: 3px dashed #aab2bd;
+  border-bottom: 3px dashed #fefefe;
   text-align: center;
   height: 80px;
   font-size: 1.8em;
-  background-color: #ccd1d9;
+  background-color: #aab2bd;
   margin-bottom: 20px;
 }
 .app .app-github-icon,
 .app .app-username-input,
 .app ::-webkit-input-placeholder {
-  color: #aab2bd;
+  color: #fefefe;
 }
-.app .user-card .user-card-inner {
-  background-color: #aab2bd;
-  color: #ccd1d9;
-  min-height: 200px;
+.app .user-card .user-card-header .user-card-avatar {
+  vertical-align: middle;
+  height: 50px;
+  left: 50px;
+  margin-right: 13.33333px;
+}
+.app .user-card .user-card-header .user-card-username {
+  vertical-align: middle;
+  font-size: 2.5em;
+}
+.app .user-card,
+.app .repo-card {
+  text-align: left;
+}
+.app .user-card .user-card-inner,
+.app .repo-card .repo-card-inner {
+  background-color: #fefefe;
+  border-radius: 6px;
+  color: #aab2bd;
+  min-height: 100px;
   margin-bottom: 20px;
+  padding: 20px 13.33333px;
+}
+.app .repo-card {
+  min-height: 120px;
+}
+.app .repo-card .repo-card-header {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.app .repo-card .repo-card-header .repo-card-name {
+  font-size: 2em;
+  color: #656d78;
+}
+.app .repo-card .repo-card-header .repo-card-username {
+  font-size: 1.25em;
+  color: #656d78;
+}
+.app .repo-card .repo-card-header .repo-card-analyze-btn {
+  width: 100%;
+}
+
+.hello {
+  margin-top: 100px;
+}
+.hello .hello-tools-used .list-group-item::before {
+  content: '//';
+  margin-right: 10px;
+  color: #bdbdbd;
+  font: 1em sans-serif;
 }

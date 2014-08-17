@@ -2,28 +2,25 @@
  * Custom styles here
  */
 
-.hello {
-    margin-top: 100px;
-
-    .hello-tools-used .list-group-item::before {
-        content: '//';
-        margin-right: 10px;
-        color: #bdbdbd;
-        font: 1em sans-serif;
-    }
-}
-
+$offWhite: #fefefe;
 $lightBlue: #5D9CEC;
 $blue: #4A89DC;
-
+$mint: #37BC9B;
+$lightMint: #48CFAD;
+$lightAqua: #48CFAD;
+$aqua: #3BAFDA;
 $lightGray: #E6E9ED;
 $mediumGray: #CCD1D9;
 $gray: #AAB2BD;
 $darkGray: #656D78;
 $darkerGray: #434A54;
 
-$primaryColor: $mediumGray;
-$secondaryColor: $gray;
+$primaryColor: $gray;
+$secondaryColor: $offWhite;
+$tertiaryColor: $lightAqua;
+
+$vGutter: 20px;
+$hGutter: $vGutter / 1.5;
 
 .app-wrapper {
     height: 100%;
@@ -41,8 +38,7 @@ $secondaryColor: $gray;
 
     .app-github-icon {
         text-align: center;
-        font-size: 8em;
-        margin-bottom: 30px;
+        margin-bottom: $vGutter;
     }
 
     .app-username-input {
@@ -53,7 +49,7 @@ $secondaryColor: $gray;
         height: 80px;
         font-size: 1.8em;
         background-color: $primaryColor;
-        margin-bottom: 20px;
+        margin-bottom: $vGutter;
     }
 
     .app-github-icon,
@@ -63,11 +59,71 @@ $secondaryColor: $gray;
     }
 
     .user-card {
-        .user-card-inner {
-            background-color: $secondaryColor;
-            color: $primaryColor;
-            min-height: 200px;
-            margin-bottom: 20px;
+
+        .user-card-header {
+
+            .user-card-avatar {
+                vertical-align: middle;
+                height: 50px;
+                left: 50px;
+                margin-right: $hGutter;
+            }
+
+            .user-card-username {
+                vertical-align: middle;
+                font-size: 2.5em;
+            }
+
         }
+
+    }
+
+    .user-card ,
+    .repo-card {
+        text-align: left;
+    }
+
+    .user-card .user-card-inner,
+    .repo-card .repo-card-inner {
+        background-color: $secondaryColor;
+        border-radius: 6px;
+        color: $primaryColor;
+        min-height: 100px;
+        margin-bottom: $vGutter;
+        padding: $vGutter $hGutter;
+    }
+
+    .repo-card {
+        min-height: 120px;
+
+        .repo-card-header {
+            margin-bottom: $vGutter / 2;
+            text-align: justify;
+
+            .repo-card-name {
+                font-size: 2em;
+                color: $darkGray;
+            }
+
+            .repo-card-username {
+                font-size: 1.25em;
+                color: $darkGray;
+            }
+
+            .repo-card-analyze-btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.hello {
+    margin-top: 100px;
+
+    .hello-tools-used .list-group-item::before {
+        content: '//';
+        margin-right: 10px;
+        color: #bdbdbd;
+        font: 1em sans-serif;
     }
 }

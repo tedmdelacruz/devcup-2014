@@ -7,9 +7,9 @@ class HomeController extends BaseController {
         return View::make('hello');
     }
 
-    public function getLanding()
+    public function getApp()
     {
-        return View::make('landing');
+        return View::make('app');
     }
 
 }

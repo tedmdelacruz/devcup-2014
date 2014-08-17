@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"connorvg/laravel-wolframalpha": "dev-master",
-		"raveren/kint": "v0.9"
+		"raveren/kint": "v0.9",
+		"knplabs/github-api": "~1.2"
 	},
 	"autoload": {
 		"classmap": [

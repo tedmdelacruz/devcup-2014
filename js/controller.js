@@ -1,16 +1,24 @@
-app.controller('UserController', function ($scope) {
-  $scope.users = [
-    {
-        'name': 'Juan dela Cruz',
-        'username': 'jdelacruz',
-        'desc': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam explicabo voluptas molestias eius dolores fuga, eveniet quisquam quo, ratione excepturi corporis quos pariatur hic id eligendi commodi obcaecati quidem itaque?'
-    },
-    {
-        'name': 'Ted Mathew dela Cruz',
-        'username': 'tedmdelacruz',
-        'desc': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam explicabo voluptas molestias eius dolores fuga, eveniet quisquam quo, ratione excepturi corporis quos pariatur hic id eligendi commodi obcaecati quidem itaque?'
-    }
-  ];
-});
+app.controller('AppController', ['$scope', '$http',
+    function ($scope, $http) {
+        $scope.queryResult = false;
 
-console.log('controller');
+        $scope.getUser = function() {
+            $http.get('getUser/' + $scope.query)
+                .success(function(data) {
+                    $scope.user = data;
+                    $scope.queryResult = true;
+
+                    $http.get('getRepos/' + $scope.query)
+                        .success(function(data) {
+                            $scope.repos = data;
+                        })
+                        .error(function(data) {
+                            $scope.reposErrorMsg = "Failed to retrieve repositories";
+                        });
+                })
+                .error(function(data) {
+                    $scope.reposErrorMsg = "Failed to retrieve users";
+                });
+        };
+    }
+]);
